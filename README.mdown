@@ -1,0 +1,53 @@
+Projeto de Aprendizagem de Máquina
+=======
+Descrição do projeto …
+
+Parametros
+------
+
+**Classe 1**
+	
+	µ = [0, 0]
+	𝝈 = 1.7
+	samples = 150
+
+**Classe 2**
+	
+	µ = [0, 3]
+	𝝈 = 0
+	samples = 100
+	
+	µ = [4, 3]
+	𝝈 = -1.7
+	samples = 50
+	
+**K-Means**
+
+	centros = 2
+	interações = 100
+
+![](http://dl.dropbox.com/u/235614/Images/Imagem1.png)
+
+Legendas
+--------
+
+- Classes
+  - +
+  - o
+- Clusters
+  - Azul
+  - Vermelho
+- Centros
+  - ☐
+  
+Resultados
+--------
+	Classe 1
+	 V: 104  F: 46
+	Classe 2
+	 V: 149  F: 1
+	
+	Indice de Rand Corrigido: 0.4699
+	Error Classificacao Global: 0.1567
+	Error Classificacao Classe 1: 0.3067
+	Error Classificacao Classe 2: 0.0067
