@@ -1,12 +1,12 @@
 Projeto de Aprendizagem de Máquina
 =======
-Descrição do projeto …
+Descrição do projeto
 
 Parametros
-------
+---
 
 **Classe 1**
-	
+
 	µ = [0, 0]
 	𝝈 = 1.7
 	samples = 150
@@ -28,8 +28,7 @@ Parametros
 
 ![](http://dl.dropbox.com/u/235614/Images/Imagem1.png)
 
-Legendas
---------
+### Legenda
 
 - Classes
   - +
@@ -41,7 +40,7 @@ Legendas
   - ☐
   
 Resultados
---------
+---
 	Classe 1
 	 V: 104  F: 46
 	Classe 2
@@ -51,3 +50,13 @@ Resultados
 	Error Classificacao Global: 0.1567
 	Error Classificacao Classe 1: 0.3067
 	Error Classificacao Classe 2: 0.0067
+	
+Instruções
+---
+Apenas rode o script `main.m`
+
+	clear % Clear Variables
+	clc   % Clear Console
+
+	[samples, qClass1, qClass2] = distribution(); % Create Distribution
+	clustering(samples, qClass1, qClass2);        % Clustering with k-means
