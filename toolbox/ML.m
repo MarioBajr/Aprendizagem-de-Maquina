@@ -1,4 +1,4 @@
-function test_targets = ML(train_patterns, train_targets, test_patterns, AlgorithmParameters)
+function [test_targets, param_struct] = ML(train_patterns, train_targets, test_patterns, AlgorithmParameters)
 
 % Classify using the maximum-likelyhood algorithm
 % Inputs:

@@ -1,4 +1,4 @@
-function [samples, qtdClass1, qtdClass2] = distribution()
+function [samples, labels] = distribution()
 
 % Classe 1
 mu1 = [0 0];
@@ -15,6 +15,8 @@ qSamples3 = 50;
 
 qtdClass1 = qSamples1;
 qtdClass2 = (qSamples2 + qSamples3);
+
+labels = [ones(qtdClass1, 1); repmat(2, [qtdClass2 1])];
 
 % Distribution Bivariate
 samples = [mvnrnd(mu1,sigma1,qSamples1);mvnrnd(mu2,sigma2,qSamples2);mvnrnd(mu3,sigma3,qSamples3)];
