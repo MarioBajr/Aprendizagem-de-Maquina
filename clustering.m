@@ -1,4 +1,4 @@
-function clustering(samples, qtdClass1, qtdClass2)
+function clustering( samples, qtdClass1, qtdClass2 )
 
 % K-Means
 opts = statset('Display','final');
@@ -67,3 +67,5 @@ fprintf('Indice de Rand Corrigido: %.4f\n', adjustedIndex);
 fprintf('Error Classificacao Global: %.4f\n', (clasF/all));
 fprintf('Error Classificacao Classe 1: %.4f\n', (cls1F/clas1));
 fprintf('Error Classificacao Classe 2: %.4f\n', (cls2F/clas2));
+
+end

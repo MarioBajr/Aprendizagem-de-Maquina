@@ -1,9 +1,9 @@
 Projeto de Aprendizagem de Máquina
-=======
+---
 Descrição do projeto
 
 Parametros
----
+===
 
 **Classe 1**
 
@@ -29,7 +29,7 @@ Parametros
 ![](http://dl.dropbox.com/u/235614/Images/Imagem1.png)
 
 ### Legenda
-
+	
 - Classes
   - +
   - o
@@ -40,7 +40,7 @@ Parametros
   - ☐
   
 Resultados
----
+===
 	Classe 1
 	 V: 104  F: 46
 	Classe 2
@@ -52,7 +52,7 @@ Resultados
 	Error Classificacao Classe 2: 0.0067
 	
 Instruções
----
+===
 Apenas rode o script `main.m`
 
 	clear % Clear Variables

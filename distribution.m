@@ -1,4 +1,4 @@
-function [samples, qtdClass1, qtdClass2]=distribution()
+function [samples, qtdClass1, qtdClass2] = distribution()
 
 % Classe 1
 mu1 = [0 0];
@@ -19,8 +19,4 @@ qtdClass2 = (qSamples2 + qSamples3);
 % Distribution Bivariate
 samples = [mvnrnd(mu1,sigma1,qSamples1);mvnrnd(mu2,sigma2,qSamples2);mvnrnd(mu3,sigma3,qSamples3)];
 
-% Draw Graphic
-% c = [ones(samples1, 1); repmat(2, [samples2 1]); repmat(2, [samples3 1])];
-% c = [ones(samples1, 1); repmat(2, [(samples2+samples3) 1])];
-% scatter(samples(:,1),samples(:,2),5, c, '+');
-% hold on
+end
