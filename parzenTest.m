@@ -8,7 +8,7 @@ for i=1:length(hn)
     
     [globalError, classErrors] = classifierError(testLabels, parzenLabels);
     
-    fprintf('hn: %.4f\n', hn(i));
+    fprintf('\nhn: %.4f\n', hn(i));
     fprintf('Error Classificacao Global: %.4f\n', globalError);
     fprintf('Error Classificacao Classe 1: %.4f\n', classErrors(1));
     fprintf('Error Classificacao Classe 2: %.4f\n', classErrors(2));

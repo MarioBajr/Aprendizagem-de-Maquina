@@ -98,7 +98,7 @@ for c = 1:Nclasses,
             Pw(c,1:Ngaussians(c)) = 1/n*sum(qi');
             
             iter = iter + 1;
-            disp(['Iteration: ' num2str(iter)])
+%             disp(['Iteration: ' num2str(iter)])
             
             if (iter > max_iter),
                 theta = randn(size(sigma_i));

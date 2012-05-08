@@ -1,4 +1,4 @@
-function test_targets = Nearest_Neighbor(train_patterns, train_targets, test_patterns, Knn)
+function [test_targets, V] = Nearest_Neighbor(train_patterns, train_targets, test_patterns, Knn)
 
 % Classify using the Nearest neighbor algorithm
 % Inputs:
@@ -25,12 +25,15 @@ if (L < Knn),
 end
 
 N               = size(test_patterns, 2);
+V               = zeros(2, N);
+
 test_targets    = zeros(1,N); 
 for i = 1:N,
     dist            = sum((train_patterns - test_patterns(:,i)*ones(1,L)).^2, 1);
     [m, indices]    = sort(dist);
     
     n               = hist(train_targets(indices(1:Knn)), Uc);
+    V(:, i)         = n';
     
     [m, best]       = max(n);
     

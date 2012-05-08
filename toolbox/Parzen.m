@@ -1,4 +1,4 @@
-function test_targets = parzen(train_patterns, train_targets, test_patterns, hn)
+function [test_targets, V] = parzen(train_patterns, train_targets, test_patterns, hn)
 
 % Classify using the Parzen windows algorithm
 % Inputs:

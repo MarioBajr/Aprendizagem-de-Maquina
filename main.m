@@ -26,7 +26,7 @@ qTrain = qSamples * .70;
 samplesT = samples';
 labelsT = labels';
 
-% Filter Trian Samples/Labels and Test Samples/Labels
+% Filter Train Samples/Labels and Test Samples/Labels
 trainSamples = samplesT(:, train_idx);
 trainLabels  = labelsT(:, train_idx);
 testSamples  = samplesT(:, test_idx);
@@ -34,8 +34,9 @@ testLabels   = labelsT(:, test_idx);
 
 % q2.a
 fprintf('\nQuestion 2.a\n');
-[resultLabels] = estimationTest(trainSamples, trainLabels, testSamples, testLabels);
+resultLabels = estimationTest(trainSamples, trainLabels, testSamples, testLabels);
 drawSamples(testSamples', testLabels', resultLabels', []);
+
 
 fprintf('\nQuestion 2.b\n');
 parzenTest(trainSamples, trainLabels, testSamples, testLabels);
@@ -44,4 +45,10 @@ fprintf('\nQuestion 2.c\n');
 knnTest(trainSamples, trainLabels, testSamples, testLabels);
 
 fprintf('\nQuestion 2.d\n');
+[resultLabels] = sumClassifierTest(trainSamples, trainLabels, testSamples, testLabels);
+[globalError, classErrors] = classifierError(testLabels, resultLabels);
+fprintf('Error Classificacao Global: %.4f\n', globalError);
+fprintf('Error Classificacao Classe 1: %.4f\n', classErrors(1));
+fprintf('Error Classificacao Classe 2: %.4f\n', classErrors(2));
+
 

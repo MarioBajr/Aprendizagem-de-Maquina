@@ -7,7 +7,7 @@ for i=1:length(k)
     knnLabels = Nearest_Neighbor(trainSamples, trainLabels, testSamples, k(i));
     [globalError, classErrors] = classifierError(testLabels, knnLabels);
     
-    fprintf('k: %.4f\n', k(i));
+    fprintf('\nk: %.4f\n', k(i));
     fprintf('Error Classificacao Global: %.4f\n', globalError);
     fprintf('Error Classificacao Classe 1: %.4f\n', classErrors(1));
     fprintf('Error Classificacao Classe 2: %.4f\n', classErrors(2));
