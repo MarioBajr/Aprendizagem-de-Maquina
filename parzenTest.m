@@ -13,7 +13,7 @@ for i=1:length(hn)
     fprintf('Error Classificacao Classe 1: %.4f\n', classErrors(1));
     fprintf('Error Classificacao Classe 2: %.4f\n', classErrors(2));
     
-%     drawSamples(testSamples', testLabels', parzenLabels', []);
+    drawSamples(testSamples', testLabels', parzenLabels', []);
 end
 
 end

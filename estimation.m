@@ -1,5 +1,5 @@
 function [classifierLabels, V] = estimation( trainSamples, trainLabels, ...
-    testSamples, testLabels )
+    testSamples )
 
 [~, paramsML] = ML(trainSamples, trainLabels, testSamples, []);
 [~, paramsEM] = EM(trainSamples, trainLabels, testSamples, [1 2]);

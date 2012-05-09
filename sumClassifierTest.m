@@ -1,17 +1,17 @@
 function [ resultLabels, M ] = sumClassifierTest( trainSamples, trainLabels, ...
-                                                  testSamples, testLabels )
-             
-M = zeros(2, length(testLabels));
-[~, V] = estimation(trainSamples, trainLabels, testSamples, testLabels);
+                                                  testSamples, knn, hn)
+         
+[~, N] = size(testSamples);
+M = zeros(2, N);
+[~, V] = estimation(trainSamples, trainLabels, testSamples);
 M = M + normalize(V);
 
-[~, V] = Parzen(trainSamples, trainLabels, testSamples, .4);
+[~, V] = Parzen(trainSamples, trainLabels, testSamples, hn);
 M = M + normalize(V);
 
-[~, V] = Nearest_Neighbor(trainSamples, trainLabels, testSamples, 15);
+[~, V] = Nearest_Neighbor(trainSamples, trainLabels, testSamples, knn);
 M = M + normalize(V);
 
-N = length(testLabels);
 resultLabels = zeros(1, N); 
 
 for i = 1:N

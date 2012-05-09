@@ -1,7 +1,7 @@
 function [classifierLabels] = estimationTest( trainSamples, trainLabels, ...
                          testSamples, testLabels )
 
-[classifierLabels, V] = estimation(trainSamples, trainLabels, testSamples, testLabels);
+[classifierLabels, V] = estimation(trainSamples, trainLabels, testSamples);
 
 [globalError, classErrors] = classifierError(testLabels, classifierLabels);
 % posteriori1 = length(find(classifierLabels==1))/length(classifierLabels);
