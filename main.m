@@ -1,5 +1,6 @@
 clear % Clear Variables
 clc   % Clear Console
+close all
 
 addpath ./toolbox % Adding Toolbox to ProjectPath
 addpath ./kde2d   % Adding Kde2d to ProjectPath
